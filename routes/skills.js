@@ -1,25 +1,27 @@
 const express = require('express');
 const router = express.Router();
 
+const skillsCtrl = require('../controllers/skills');
 
 // Index Route
-router.get('/', (req, res) => {
-    res.render('skills/index', {
-        skills: Skill.getAll(),
-    });
-});
+router.get('/', skillsCtrl.index);
 
-// Show Route
-// router.get('/', (req, res) => {
-//     res.render('', {
-//         skills: Skill.getOne(),
-//     });
-// });
+// // Show New Route
+// router.post('/new', skillsCtrl.new);
 
-// Create Route
+// // Create Route
+// router.post('/', skillsCtrl.create);
 
-// Edit Route
+// // Show Route
+// router.get('/:id', skillsCtrl.show);
 
-// Delete Route
+// // Edit Route
+// router.get('/:id/edit', skillsCtrl.edit);
+
+// // Update Route
+// router.put('/:id', skillsCtrl.update);
+
+// // Destroy Route
+// router.delete('/:id', skillsCtrl.delete);
 
 module.exports = router;
