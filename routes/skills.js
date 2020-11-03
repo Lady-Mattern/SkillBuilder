@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const Skill = require('../models/skill');
 
 // Index Route
 router.get('/', (req, res) => {

@@ -9,3 +9,10 @@ module.exports = {
     edit,
     update 
 }
+
+function index(req, res) {
+    res.render('skills/index', { 
+        skills: Skill.getAll(),
+        time: req.time
+    });
+}
